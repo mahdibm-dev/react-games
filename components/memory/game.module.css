@@ -1,0 +1,354 @@
+.card {
+	border-radius: 5px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transition: transform 0.3s;
+	height: 100px;
+	cursor: pointer;
+}
+.card .front,
+.card .back {
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.card .back {
+	transform: rotateY(180deg);
+}
+.restart {
+	width: 100%;
+	min-height: 46px;
+	background: #8c49a3;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.8rem;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	border: none;
+	margin: 0.5rem 0;
+}
+.memory {
+	font-family: 'LarkenLight';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+}
+.mygrid {
+	display: grid;
+	width: 480px;
+	grid-column: repeat(1fr, 3);
+	gap: 1;
+}
+.col {
+	background-color: #8c49a3;
+}
+/*main game*/
+.container {
+	background-image: url('/memory/bg3.png'), url('/memory/bg.png');
+	background-repeat: no-repeat, no-repeat;
+	background-position: center 100%, center;
+	background-size: contain, cover;
+	width: 100%;
+}
+.header {
+	background-image: url('/memory/logo1.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	height: 135px;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+/*Welcome*/
+.welcomeTitle {
+	font-family: 'Decohead';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	color: #277c29;
+}
+.remplirText {
+	font-family: 'Decohead';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+}
+.participateButton {
+	background: #2e6e17;
+	border-radius: 19.5px;
+	outline: none;
+	border: none;
+	height: 48px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+	margin-bottom: 15rem;
+	text-transform: uppercase;
+}
+.welcomePg {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	text-align: center;
+	color: white;
+	padding: 2rem 0;
+}
+.instaButton {
+	width: 162px;
+	height: 32px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	background: white;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	margin: 0.6rem;
+}
+.instaLink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #d41b13;
+}
+.reglement {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1rem;
+	color: #ffffff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+/*gameBoard*/
+.timer {
+	background-image: url('/memory/timerBG.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+/*form*/
+.error {
+	color: rgb(255, 255, 255);
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.8rem;
+	padding-left: 0.2rem;
+	display: flex;
+	align-items: center;
+}
+
+/*dialog*/
+.DialogTitle {
+	font-family: 'Decohead';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin: 0 1rem;
+}
+.DialogContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #e6e6e6;
+	border-radius: 15px;
+	margin: 0 2rem;
+	padding: 0.7rem !important;
+}
+.DialogContentText {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: black;
+}
+/*game Navbar*/
+.content {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+}
+.itemContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.navItemsText {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #7a7a7a;
+	text-align: center;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.navLogo {
+	height: 70px;
+	width: 100%;
+	background-image: url('/memory/logo.png');
+	background-repeat: no-repeat;
+	background-position: 20% center;
+	background-size: contain;
+}
+/*customPopper*/
+.popperContainer {
+	width: 100%;
+	border: solid 1px red;
+}
+
+/*NavItem1*/
+.NavItem1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+}
+.navItemTitle {
+	padding-top: 0.5rem;
+	color: #000;
+	font-family: 'OpenSans';
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+}
+.recetteText {
+	color: #000;
+	font-family: 'OpenSans';
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+}
+.recetterow2 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.textField,
+.textField:focus {
+	width: 100%;
+	height: 42px;
+	font-family: Poppins;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: rgb(234, 234, 234);
+	outline: none;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	padding: 10px 10px 10px 15px;
+	margin: 0.5rem 0;
+}
+/*result*/
+.results {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	background: #ebebeb;
+	border-radius: 10px;
+	margin: 0.5rem 0;
+}
+.row {
+	padding: 0.5rem 1rem;
+	font-family: Poppins;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: 400;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.resultButton {
+	background: #2e6e17;
+	border-radius: 19.5px;
+	outline: none;
+	border: none;
+	height: 48px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+	.welcomeTitle {
+		font-size: 2rem;
+	}
+	.welcomePg {
+		font-size: 0.8rem;
+	}
+	.card {
+		height: 70px;
+	}
+	.container {
+		background-size: contain, cover;
+	}
+}
+@media screen and (max-width: 400px) {
+	.participateButton {
+		margin-bottom: 100px;
+	}
+}

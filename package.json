@@ -1,0 +1,28 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 7501",
+    "build": "next build",
+    "start": "next start -p 7501",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.14",
+    "next": "^12.2.2",
+    "next-share": "^0.19.0",
+    "react": "18.2.0",
+    "react-confetti": "^6.1.0",
+    "react-countdown-circle-timer": "^3.1.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "eslint": "^8.32.0",
+    "eslint-config-next": "^13.1.5",
+    "eslint-config-prettier": "^8.6.0"
+  }
+}

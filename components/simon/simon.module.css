@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+.container {
+  background-image: url('/simon/footerbg.png'), url('/bandit/bg.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 100%, center;
+  background-size: contain, cover;
+  width: 100%;
+  /*min-height: calc(120vh + 135px);*/
+}
+
+/*Result component styleSheet*/
+.resultButton {
+  background: #2e6e17;
+  border-radius: 19.5px;
+  outline: none;
+  border: none;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.welcomePg {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  padding: 2rem 0;
+}
+.remplirText {
+  font-family: 'Decohead';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+/*Welcome component styleSheet*/
+.participateButton {
+  background: #2e6e17;
+  border-radius: 19.5px;
+  outline: none;
+  border: none;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 15rem;
+}
+/*Form component styleSheet*/
+.instaButton {
+  width: 162px;
+  height: 32px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin: 0.6rem;
+}
+.instaLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #d41b13;
+}
+.reglement {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.error {
+  color: rgb(255, 255, 255);
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+.textField,
+.textField:focus {
+  width: 100%;
+  height: 42px;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(234, 234, 234);
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  padding: 10px 10px 10px 15px;
+  margin: 0.5rem 0;
+}
+.timer {
+  color: white;
+  font-family: 'Orbitron';
+  font-size: 1.2rem;
+  text-align: center;
+}
+.countdown {
+  background-color: grey;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  border: solid 2px #ffffff;
+  z-index: 11;
+}
+.circleContainer {
+  width: fit-content;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+.circleContainer > * {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+.lgSquare {
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  width: 283px;
+  height: 283px;
+}
+.lgSquare > * {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  filter: brightness(1);
+  transition: filter transform 0.3s ease-in;
+  cursor: pointer;
+}
+.lgSquare > *:active {
+  filter: brightness(5);
+  transform: scale(1.02);
+}
+.smSquare1 {
+  border-radius: 97% 0 0 0;
+  background-color: #3fbb87;
+}
+.smSquare2 {
+  border-radius: 0 97% 0 0;
+  background-color: #ef357c;
+}
+.smSquare3 {
+  border-radius: 0 0 0 97%;
+  background-color: #fdc941;
+}
+.smSquare4 {
+  border-radius: 0 0 97% 0;
+  background-color: #6477dd;
+}
+.playButton {
+  border-radius: 50%;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  width: 95px;
+  height: 95px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  z-index: 10;
+  border: solid 2px white;
+}
+.playButton:hover {
+  transform: scale(1.08);
+}
+.bright {
+  filter: brightness(5);
+  transform: scale(1.02);
+}
+@media screen and (max-width: 500px) {
+  .welcomeTitle {
+    font-size: 2rem;
+  }
+  .welcomePg {
+    font-size: 0.8rem;
+  }
+  .card {
+    height: 70px;
+  }
+
+  .participateButton {
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .spinnerContainer {
+    transform: scale(0.6);
+  }
+}

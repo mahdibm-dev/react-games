@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+.container {
+	background-image: url('/bandit/bgfooter.png'), url('/bandit/bg.png');
+	background-repeat: no-repeat, no-repeat;
+	background-position: center 100%, center;
+	background-size: contain, cover;
+	width: 100%;
+	/*min-height: calc(120vh + 135px);*/
+}
+
+.icons {
+	display: flex;
+	width: 128px !important;
+	height: 564px;
+	overflow: hidden;
+	background: #fff url('/bandit/sprite5.png');
+	background-repeat: repeat-y;
+	will-change: backgroundPosition;
+	transition: 0.5s background-position ease-in-out;
+	padding: 0 80px;
+	transform: translateZ(0);
+	margin: 0 0.2rem !important;
+}
+
+.spinnerContainer {
+	padding: 2rem;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s transform;
+	position: relative;
+	transform: scale(0.6, 0.6);
+}
+.app-wrap.winner-false {
+	animation: linear 1s spin;
+}
+.spinnerContainer::after {
+	width: calc(100% - 4rem);
+	content: '';
+	height: 180px;
+	background: rgba(255, 0, 0, 0.1);
+	position: absolute;
+	margin: 0 !important;
+}
+.gradientFade {
+	margin: 0 !important;
+	position: absolute;
+	top: 32px;
+	right: 32px;
+	bottom: 32px;
+	left: 32px;
+	background: linear-gradient(
+		to bottom,
+		rgba(64, 64, 64, 1) 0%,
+		rgba(64, 64, 64, 0) 7%,
+		rgba(64, 64, 64, 0) 93%,
+		rgba(64, 64, 64, 1) 100%
+	);
+}
+/*Result component styleSheet*/
+.resultButton {
+	background: #2e6e17;
+	border-radius: 19.5px;
+	outline: none;
+	border: none;
+	height: 48px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+}
+.welcomePg {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	text-align: center;
+	color: white;
+	padding: 2rem 0;
+}
+.remplirText {
+	font-family: 'Decohead';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+}
+/*Welcome component styleSheet*/
+.participateButton {
+	background: #2e6e17;
+	border-radius: 19.5px;
+	outline: none;
+	border: none;
+	height: 48px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+	margin-bottom: 15rem;
+}
+/*Form component styleSheet*/
+.instaButton {
+	width: 162px;
+	height: 32px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	background: white;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	margin: 0.6rem;
+}
+.instaLink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #d41b13;
+}
+.reglement {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1rem;
+	color: #ffffff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.error {
+	color: rgb(255, 255, 255);
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.8rem;
+	padding-left: 0.2rem;
+	display: flex;
+	align-items: center;
+}
+.textField,
+.textField:focus {
+	width: 100%;
+	height: 42px;
+	font-family: Poppins;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: rgb(234, 234, 234);
+	outline: none;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	padding: 10px 10px 10px 15px;
+	margin: 0.5rem 0;
+}
+@media screen and (max-width: 500px) {
+	.welcomeTitle {
+		font-size: 2rem;
+	}
+	.welcomePg {
+		font-size: 0.8rem;
+	}
+	.card {
+		height: 70px;
+	}
+	.container {
+		/*min-height: calc(120vh);*/
+	}
+	.participateButton {
+		margin-bottom: 6rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	.spinnerContainer {
+		transform: scale(0.6);
+	}
+}

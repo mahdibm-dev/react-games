@@ -3,7 +3,7 @@
 import { Grid } from '@mui/material'
 import Image from 'next/image'
 import { useState } from 'react'
-import styles from '../banditManchot/banditManchot.module.css'
+import styles from './form.module.css'
 import Icon from '../../public/icons/index'
 
 function validateEmail(email) {

@@ -1,70 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Cairo');
-
-@keyframes spin {
-	to {
-		transform: rotate(360deg);
-	}
-}
-.container {
-	background-image: url('/bandit/bgfooter.png'), url('/bandit/bg.png');
-	background-repeat: no-repeat, no-repeat;
-	background-position: center 100%, center;
-	background-size: contain, cover;
-	width: 100%;
-	/*min-height: calc(120vh + 135px);*/
-}
-
-.icons {
-	display: flex;
-	width: 128px !important;
-	height: 564px;
-	overflow: hidden;
-	background: #fff url('/bandit/sprite5.png');
-	background-repeat: repeat-y;
-	will-change: backgroundPosition;
-	transition: 0.5s background-position ease-in-out;
-	padding: 0 80px;
-	transform: translateZ(0);
-	margin: 0 0.2rem !important;
-}
-
-.spinnerContainer {
-	padding: 2rem;
-	width: fit-content;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: 0.3s transform;
-	position: relative;
-	transform: scale(0.6, 0.6);
-}
-.app-wrap.winner-false {
-	animation: linear 1s spin;
-}
-.spinnerContainer::after {
-	width: calc(100% - 4rem);
-	content: '';
-	height: 180px;
-	background: rgba(255, 0, 0, 0.1);
-	position: absolute;
-	margin: 0 !important;
-}
-.gradientFade {
-	margin: 0 !important;
-	position: absolute;
-	top: 32px;
-	right: 32px;
-	bottom: 32px;
-	left: 32px;
-	background: linear-gradient(
-		to bottom,
-		rgba(64, 64, 64, 1) 0%,
-		rgba(64, 64, 64, 0) 7%,
-		rgba(64, 64, 64, 0) 93%,
-		rgba(64, 64, 64, 1) 100%
-	);
-}
-/*Result component styleSheet*/
 .resultButton {
 	background: #2e6e17;
 	border-radius: 19.5px;
@@ -194,9 +127,6 @@
 	}
 	.card {
 		height: 70px;
-	}
-	.container {
-		/*min-height: calc(120vh);*/
 	}
 	.participateButton {
 		margin-bottom: 6rem;
